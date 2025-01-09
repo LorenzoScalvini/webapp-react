@@ -1,0 +1,40 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 1rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #b3b3b3;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #e50914;
+}
