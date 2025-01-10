@@ -13,6 +13,11 @@ function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <Link className={styles.brand} to="/">
+          <img
+            className={styles.logo}
+            src="http://localhost:3000/public/images/logo.png"
+            alt="logoimg"
+          />
           MovieApp
         </Link>
         <button className={styles.toggler} onClick={toggleMenu}>
