@@ -1,0 +1,114 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  margin-top: 8rem;
+  background-color: rgb(54, 54, 54);
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.movieInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.movieInfoItem {
+  background-color: #141414;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: #b3b3b3;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.reviewsTitle {
+  font-size: 2rem;
+  color: #e50914;
+  margin-bottom: 1.5rem;
+}
+
+.reviewCard {
+  background-color: #141414;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviewCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
+}
+
+.reviewName {
+  font-weight: bold;
+  color: #e50914;
+  font-size: 1.2rem;
+}
+
+.reviewText {
+  color: #b3b3b3;
+  line-height: 1.5;
+}
+
+.reviewStars {
+  color: #f39c12;
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+.noReviews {
+  font-style: italic;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #e50914;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #b20710;
+}

@@ -1,17 +1,25 @@
+import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./MovieCard.module.css";
 
 function MovieCard({ movie }) {
   return (
-    <div className="col-md-4">
-      <div className="card mb-4">
-        <img src={movie.poster} className="card-img-top" alt={movie.title} />
-        <div className="card-body">
-          <h5 className="card-title">{movie.title}</h5>
-          <p className="card-text">{movie.description.slice(0, 100)}...</p>
-          <Link to={`/movie/${movie.id}`} className="btn btn-primary">
-            View Details
-          </Link>
-        </div>
+    <div className={styles.card}>
+      <div className={styles.imageWrapper}>
+        <img
+          src={
+            movie.image || "https://via.placeholder.com/250x150?text=No+Image"
+          }
+          alt={movie.title}
+          className={styles.image}
+        />
+      </div>
+      <div className={styles.body}>
+        <h3 className={styles.title}>{movie.title}</h3>
+        <p className={styles.abstract}>{movie.abstract}</p>
+        <Link to={`/movies/${movie.id}`} className={styles.link}>
+          View Details
+        </Link>
       </div>
     </div>
   );

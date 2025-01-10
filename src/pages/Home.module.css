@@ -1,0 +1,20 @@
+.container {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  background-color: rgb(54, 54, 54);
+}
+
+.title {
+  font-size: 2rem;
+  color: #e50914;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.moviesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

@@ -1,3 +1,4 @@
+/* Stile per la barra di navigazione */
 .navbar {
   background-color: #000000;
   padding: 0.5rem 1rem;
@@ -7,6 +8,7 @@
   align-items: center;
   position: fixed;
   width: 100%;
+  height: 80px;
   top: 0;
   z-index: 1000;
 }
@@ -22,6 +24,7 @@
   font-size: 1.5rem;
   color: #e50914;
   text-decoration: none;
+  margin-left: 1rem;
 }
 
 .toggler {
@@ -36,6 +39,7 @@
 .navMenu {
   display: flex;
   align-items: center;
+  margin-right: 1rem;
 }
 
 .navList {

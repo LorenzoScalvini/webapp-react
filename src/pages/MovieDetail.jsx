@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import styles from "./MovieDetail.module.css";
 
 function MovieDetail() {
   const [movie, setMovie] = useState(null);
@@ -23,28 +24,44 @@ function MovieDetail() {
     fetchMovie();
   }, [id]);
 
-  if (loading) return <div className="container mt-4">Loading...</div>;
-  if (error) return <div className="container mt-4 text-danger">{error}</div>;
-  if (!movie) return <div className="container mt-4">Movie not found</div>;
+  const renderStars = (vote) => {
+    return "★".repeat(vote) + "☆".repeat(5 - vote);
+  };
+
+  if (loading) return <div className={styles.message}>Loading...</div>;
+  if (error)
+    return <div className={`${styles.message} ${styles.error}`}>{error}</div>;
+  if (!movie) return <div className={styles.message}>Movie not found</div>;
 
   return (
-    <div className="container mt-4">
-      <div className="card">
-        <div className="card-body">
-          <h1 className="card-title">{movie.title}</h1>
-          <p className="card-text">{movie.description}</p>
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <div className={styles.cardBody}>
+          <h1 className={styles.title}>{movie.title}</h1>
+          <p className={styles.detail}>
+            <strong>Director:</strong> {movie.director}
+          </p>
+          <p className={styles.detail}>
+            <strong>Release Year:</strong> {movie.release_year}
+          </p>
+          <p className={styles.detail}>
+            <strong>Genre:</strong> {movie.genre}
+          </p>
+          <p className={styles.description}>{movie.description}</p>
 
-          <h2 className="mt-4">Reviews</h2>
+          <h2 className={styles.reviewsTitle}>Reviews</h2>
           {movie.reviews && movie.reviews.length > 0 ? (
             movie.reviews.map((review, index) => (
-              <div key={index} className="card mb-3">
-                <div className="card-body">
-                  <p>{review.text}</p>
+              <div key={index} className={styles.reviewCard}>
+                <div className={styles.reviewBody}>
+                  <p className={styles.reviewName}>{review.name}</p>
+                  <p className={styles.reviewText}>{review.text}</p>
                 </div>
+                <p className={styles.reviewStars}>{renderStars(review.vote)}</p>
               </div>
             ))
           ) : (
-            <p>No reviews yet</p>
+            <p className={styles.noReviews}>No reviews yet</p>
           )}
         </div>
       </div>
