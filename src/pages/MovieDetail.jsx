@@ -38,6 +38,14 @@ function MovieDetail() {
       <div className={styles.card}>
         <div className={styles.cardBody}>
           <h1 className={styles.title}>{movie.title}</h1>
+          <img
+            src={
+              "http://localhost:3000/public/images/" + movie.image ||
+              "https://via.placeholder.com/250x150?text=No+Image"
+            }
+            alt={movie.title}
+            className={styles.image}
+          />
           <p className={styles.detail}>
             <strong>Director:</strong> {movie.director}
           </p>

@@ -112,3 +112,9 @@
 .backButton:hover {
   background-color: #b20710;
 }
+
+.image {
+  width: 40%;
+  border-radius: 6px;
+  margin: 1rem;
+}
