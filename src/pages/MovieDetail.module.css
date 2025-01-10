@@ -4,13 +4,11 @@
   font-family: Arial, sans-serif;
   color: #ffffff;
   margin-top: 8rem;
-  background-color: rgb(54, 54, 54);
 }
 
 .card {
-  background-color: #1e1e1e;
+  background-color: #7c848c;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
   margin-bottom: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -18,12 +16,11 @@
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
 }
 
 .title {
   font-size: 2.5rem;
-  color: #e50914;
+  color: #04e263;
   margin-bottom: 1rem;
 }
 
@@ -35,26 +32,24 @@
 }
 
 .movieInfoItem {
-  background-color: #141414;
+  background-color: #74747c;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   color: #b3b3b3;
   font-size: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .reviewsTitle {
   font-size: 2rem;
-  color: #e50914;
+  color: #04e263;
   margin-bottom: 1.5rem;
 }
 
 .reviewCard {
-  background-color: #141414;
+  background-color: #74747c;
   border-radius: 6px;
   padding: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -63,12 +58,11 @@
 
 .reviewCard:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
 }
 
 .reviewName {
   font-weight: bold;
-  color: #e50914;
+  color: #04e263;
   font-size: 1.2rem;
 }
 
@@ -90,7 +84,7 @@
 }
 
 .error {
-  color: #e74c3c;
+  color: #04e263;
   font-weight: bold;
   text-align: center;
   margin-top: 2rem;
@@ -99,7 +93,7 @@
 .backButton {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #e50914;
+  background-color: #04e263;
   color: #ffffff;
   text-decoration: none;
   border-radius: 6px;

@@ -1,5 +1,5 @@
 .footer {
-  background-color: #000000;
+  background-color: #041333;
   padding: 1rem 0;
   color: #b3b3b3;
   text-align: center;
@@ -52,7 +52,7 @@
 
   .title {
     font-size: 1.5rem;
-    color: #e50914;
+    color: #04e263;
     margin-bottom: 1rem;
   }
 
@@ -82,7 +82,7 @@
 
   .navLink:hover,
   .socialLink:hover {
-    color: #e50914;
+    color: #04e263;
   }
 
   @media (max-width: 768px) {
@@ -117,7 +117,7 @@
 
 .title {
   font-size: 1.2rem;
-  color: #e50914;
+  color: #04e263;
   margin-bottom: 0.5rem;
 }
 
@@ -147,7 +147,7 @@
 
 .navLink:hover,
 .socialLink:hover {
-  color: #e50914;
+  color: #04e263;
 }
 
 @media (max-width: 768px) {
