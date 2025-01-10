@@ -47,7 +47,7 @@ function MovieDetail() {
           <p className={styles.detail}>
             <strong>Genre:</strong> {movie.genre}
           </p>
-          <p className={styles.description}>{movie.description}</p>
+          <p className={styles.abstract}>{movie.abstract}</p>
 
           <h2 className={styles.reviewsTitle}>Reviews</h2>
           {movie.reviews && movie.reviews.length > 0 ? (
