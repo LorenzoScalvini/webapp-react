@@ -1,4 +1,3 @@
-/* Stile per la barra di navigazione */
 .navbar {
   background-color: #041333;
   padding: 0.5rem 1rem;
@@ -80,7 +79,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #141414;
+    background-color: #041333;
     padding: 1rem 0;
   }
 
