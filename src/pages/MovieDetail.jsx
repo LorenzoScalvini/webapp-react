@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import ReviewForm from "../components/ReviewForm";
 import styles from "./MovieDetail.module.css";
 
 function MovieDetail() {
@@ -40,8 +41,9 @@ function MovieDetail() {
           <h1 className={styles.title}>{movie.title}</h1>
           <img
             src={
-              "http://localhost:3000/public/images/" + movie.image ||
-              "https://via.placeholder.com/250x150?text=No+Image"
+              movie.image
+                ? `http://localhost:3000/public/images/${movie.image}`
+                : "https://via.placeholder.com/250x150?text=No+Image"
             }
             alt={movie.title}
             className={styles.image}
@@ -73,6 +75,7 @@ function MovieDetail() {
           )}
         </div>
       </div>
+      <ReviewForm movieId={id} />
     </div>
   );
 }
