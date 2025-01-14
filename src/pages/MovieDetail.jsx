@@ -11,18 +11,16 @@ function MovieDetail() {
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchMovie = async () => {
-      try {
-        const response = await axios.get(`http://localhost:3000/movies/${id}`);
+    axios
+      .get(`http://localhost:3000/movies/${id}`)
+      .then((response) => {
         setMovie(response.data);
         setLoading(false);
-      } catch (err) {
+      })
+      .catch((err) => {
         setError("Error fetching movie details");
         setLoading(false);
-      }
-    };
-
-    fetchMovie();
+      });
   }, [id]);
 
   const renderStars = (vote) => {

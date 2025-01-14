@@ -9,18 +9,16 @@ function Home() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await axios.get("http://localhost:3000/movies");
+    axios
+      .get("http://localhost:3000/movies")
+      .then((response) => {
         setMovies(response.data);
         setLoading(false);
-      } catch (err) {
+      })
+      .catch((err) => {
         setError("Error fetching movies");
         setLoading(false);
-      }
-    };
-
-    fetchMovies();
+      });
   }, []);
 
   if (loading) return <div className={styles.container}>Loading...</div>;
