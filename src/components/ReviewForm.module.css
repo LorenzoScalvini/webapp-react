@@ -1,5 +1,5 @@
 .card {
-  background-color: #7c848c;
+  background-color: #2c3e50;
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -19,7 +19,7 @@
 
 .label {
   font-size: 1rem;
-  color: #b3b3b3;
+  color: #bdc3c7;
 }
 
 .input,
@@ -27,9 +27,11 @@
 .select {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #b3b3b3;
+  border: 1px solid #bdc3c7;
   border-radius: 6px;
   font-size: 1rem;
+  background-color: #34495e;
+  color: #ffffff;
 }
 
 .button {
@@ -51,4 +53,9 @@
   font-size: 1rem;
   color: #04e263;
   text-align: center;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
 }

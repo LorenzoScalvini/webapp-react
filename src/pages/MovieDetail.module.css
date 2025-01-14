@@ -3,10 +3,14 @@
   margin: 2rem auto;
   font-family: Arial, sans-serif;
   color: #ffffff;
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 8rem;
 }
 
 .card {
-  background-color: #7c848c;
+  background-color: #2c3e50;
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -24,13 +28,13 @@
 }
 
 .image {
-  width: 100%;
+  width: 30%;
   border-radius: 8px;
 }
 
 .detail {
   font-size: 1rem;
-  color: #b3b3b3;
+  color: #bdc3c7;
 }
 
 .reviewsTitle {
@@ -40,7 +44,7 @@
 }
 
 .reviewCard {
-  background-color: #74747c;
+  background-color: #34495e;
   border-radius: 6px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -55,7 +59,7 @@
 }
 
 .reviewText {
-  color: #b3b3b3;
+  color: #bdc3c7;
   line-height: 1.5;
 }
 
@@ -74,4 +78,9 @@
   font-weight: bold;
   color: #ffffff;
   text-align: center;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
 }
