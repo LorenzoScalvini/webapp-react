@@ -1,7 +1,14 @@
+:root {
+  --navbar-bg: #141414; /* Dark Black */
+  --navbar-color: #ffffff; /* Light Gray */
+  --highlight-color: #e50914; /* Netflix Red */
+  --hover-color: #b3b3b3; /* Grayish White */
+}
+
 .navbar {
-  background-color: #041333;
+  background-color: var(--navbar-bg);
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: var(--navbar-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +17,7 @@
   height: 80px;
   top: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .container {
@@ -19,33 +27,52 @@
   width: 100%;
 }
 
+.brandContainer {
+  display: flex;
+  align-items: center;
+}
+
 .brand {
-  font-size: 1.5rem;
-  color: #04e263;
-  text-decoration: none;
-  margin-left: 1rem;
-  justify-content: space-between;
+  display: flex;
   align-items: center;
 }
 
 .logo {
   width: 70px;
-  margin-left: 4rem;
+  margin-right: 1rem;
+}
+
+.title {
+  color: var(--highlight-color);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .toggler {
   background: none;
   border: none;
-  color: #fff;
+  color: var(--navbar-color);
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
+  margin-right: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.togglerActive {
+  transform: rotate(90deg);
 }
 
 .navMenu {
   display: flex;
   align-items: center;
-  margin-right: 4rem;
+  margin-right: 3rem;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .navList {
@@ -53,25 +80,22 @@
   display: flex;
   padding: 0;
   margin: 0;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .navItem {
   margin-left: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .navLink {
-  color: #fff;
+  color: var(--navbar-color);
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .navLink:hover {
-  color: #04e263;
+  color: var(--hover-color);
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -80,17 +104,22 @@
   }
 
   .navMenu {
-    display: none;
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #041333;
+    background-color: var(--navbar-bg);
     padding: 1rem 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
   }
 
   .navMenu.active {
-    display: block;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .navList {

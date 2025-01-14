@@ -12,14 +12,22 @@ function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <Link className={styles.brand} to="/">
-          <img
-            className={styles.logo}
-            src="http://localhost:3000/public/images/logo.png"
-            alt="logoimg"
-          />
-        </Link>
-        <button className={styles.toggler} onClick={toggleMenu}>
+        <div className={styles.brandContainer}>
+          <Link className={styles.brand} to="/">
+            <img
+              className={styles.logo}
+              src="http://localhost:3000/public/images/logo.png"
+              alt="logoimg"
+            />
+          </Link>
+          <span className={styles.title}>Movies App</span>
+        </div>
+        <button
+          className={`${styles.toggler} ${
+            isMenuOpen ? styles.togglerActive : ""
+          }`}
+          onClick={toggleMenu}
+        >
           ☰
         </button>
         <div className={`${styles.navMenu} ${isMenuOpen ? styles.active : ""}`}>
