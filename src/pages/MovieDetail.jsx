@@ -17,7 +17,7 @@ function MovieDetail() {
         setMovie(response.data);
         setLoading(false);
       })
-      .catch((err) => {
+      .catch(() => {
         setError("Error fetching movie details");
         setLoading(false);
       });
@@ -35,8 +35,7 @@ function MovieDetail() {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <div className={styles.cardBody}>
-          <h1 className={styles.title}>{movie.title}</h1>
+        <div className={styles.header}>
           <img
             src={
               movie.image
@@ -46,32 +45,34 @@ function MovieDetail() {
             alt={movie.title}
             className={styles.image}
           />
-          <p className={styles.detail}>
-            <strong>Director:</strong> {movie.director}
-          </p>
-          <p className={styles.detail}>
-            <strong>Release Year:</strong> {movie.release_year}
-          </p>
-          <p className={styles.detail}>
-            <strong>Genre:</strong> {movie.genre}
-          </p>
-          <p className={styles.abstract}>{movie.abstract}</p>
-
-          <h2 className={styles.reviewsTitle}>Reviews</h2>
-          {movie.reviews && movie.reviews.length > 0 ? (
-            movie.reviews.map((review, index) => (
-              <div key={index} className={styles.reviewCard}>
-                <div className={styles.reviewBody}>
-                  <p className={styles.reviewName}>{review.name}</p>
-                  <p className={styles.reviewText}>{review.text}</p>
-                </div>
-                <p className={styles.reviewStars}>{renderStars(review.vote)}</p>
-              </div>
-            ))
-          ) : (
-            <p className={styles.noReviews}>No reviews yet</p>
-          )}
+          <div className={styles.details}>
+            <h1 className={styles.title}>{movie.title}</h1>
+            <p className={styles.detail}>
+              <strong>Director:</strong> {movie.director}
+            </p>
+            <p className={styles.detail}>
+              <strong>Release Year:</strong> {movie.release_year}
+            </p>
+            <p className={styles.detail}>
+              <strong>Genre:</strong> {movie.genre}
+            </p>
+          </div>
         </div>
+        <p className={styles.abstract}>{movie.abstract}</p>
+        <h2 className={styles.reviewsTitle}>Reviews</h2>
+        {movie.reviews && movie.reviews.length > 0 ? (
+          movie.reviews.map((review, index) => (
+            <div key={index} className={styles.reviewCard}>
+              <div className={styles.reviewBody}>
+                <p className={styles.reviewName}>{review.name}</p>
+                <p className={styles.reviewText}>{review.text}</p>
+              </div>
+              <p className={styles.reviewStars}>{renderStars(review.vote)}</p>
+            </div>
+          ))
+        ) : (
+          <p className={styles.noReviews}>No reviews yet</p>
+        )}
       </div>
       <ReviewForm movieId={id} />
     </div>
